@@ -182,31 +182,72 @@ lista_ligada = LinkedList()
 
 #_____________________________________________________
 #chama a funcao que adiciona valores
-lista_ligada.inserir_inicio(10)
-#lista_ligada.inserir_meio(x,y)
-lista_ligada.inserir_fim(20)
-lista_ligada.inserir_fim(30)
-lista_ligada.inserir_fim(40)
-lista_ligada.inserir_fim(50)
-
-print("lista=", lista_ligada.transforma_em_lista())
-lista_ligada.inserir_meio(15,1)
-print("lista=", lista_ligada.transforma_em_lista())
-lista_ligada.inserir_meio(25,3)
-print("lista=", lista_ligada.transforma_em_lista())
-lista_ligada.inserir_meio(35,5)
-print("lista=", lista_ligada.transforma_em_lista())
-
+#lista_ligada.inserir_inicio()
+#lista_ligada.inserir_meio()
+#lista_ligada.inserir_fim()
 
 #chama a funcao que apaga valores
-lista_ligada.remove(99)
-lista_ligada.limpa() #apaga a lista
+#lista_ligada.remove()
+#lista_ligada.limpa() #apaga a lista
 
 # funcao que mensura os valores 
-lista_ligada.tamanho()
-lista_ligada.esta_vazio() 
-lista_ligada.indice_de(20)
-lista_ligada.recupera_indice(1)
-lista_ligada.transforma_em_lista()
+#lista_ligada.tamanho()
+#lista_ligada.esta_vazio() 
+#lista_ligada.indice_de()
+#lista_ligada.recupera_indice()
+#lista_ligada.transforma_em_lista()
 
+
+#_____________________________________________________
+#atividade
+
+#4 1 3 6  5 6 8 -10 9 11 13 22 10 20 35 44 55 78 80
+#6   
+#P   
+#A -77 5
+#A -88 2
+#P
+#R 10
+#P
+
+
+lista=[4,1,3,6,5,6,8,-10,9,11,13,22,10,20,35,44,55,78,80,6]
+for i in range(len(lista)):
+    if i == 1:
+        lista_ligada.inserir_inicio(lista[i-1])
+    else: 
+        lista_ligada.inserir_fim(lista[i-1])
+print(lista_ligada.transforma_em_lista())
+lista_ligada.inserir_meio(-77, 5)
+print(lista_ligada.transforma_em_lista())
+lista_ligada.inserir_meio(-88, 2)
+print(lista_ligada.transforma_em_lista())
+lista_ligada.remove(10)
+print(lista_ligada.transforma_em_lista())
+
+#zerando a lista_____________________________________
+lista_ligada.limpa()
+print(lista_ligada.transforma_em_lista())
+
+#____________________________________________________
+#atividade
+#1 5 6 8 -10 9 11 13 22 10 2
+#4
+#A 10 3
+#A -50 6
+#R 22
+#P
+lista=[1,5,6,8,-10,9,11,13,22,10,2,4]
+for i in range(len(lista)):
+    if i == 1:
+        lista_ligada.inserir_inicio(lista[i-1])
+    else: 
+        lista_ligada.inserir_fim(lista[i-1])
+print(lista_ligada.transforma_em_lista())
+lista_ligada.inserir_meio(10, 3)
+print(lista_ligada.transforma_em_lista())
+lista_ligada.inserir_meio(-50, 6)
+print(lista_ligada.transforma_em_lista())
+lista_ligada.remove(22)
+print(lista_ligada.transforma_em_lista())
 
